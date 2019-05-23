@@ -1,0 +1,48 @@
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.exe.config
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.exe
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.pdb
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.FormUI.resources
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.Properties.Resources.resources
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.GenerateResource.Cache
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.exe
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.pdb
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Interop.WMPLib.dll
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Interop.WMPLib.dll
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.ResolveComReference.cache
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.Forme.BigScreen.resources
+C:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csprojAssemblyReference.cache
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.exe.config
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.exe
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.pdb
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Interop.WMPLib.dll
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\AxInterop.WMPLib.dll
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csprojAssemblyReference.cache
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Interop.WMPLib.dll
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\AxInterop.WMPLib.dll
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.ResolveComReference.cache
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.Forme.BigScreen.resources
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.FormUI.resources
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.Properties.Resources.resources
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.GenerateResource.cache
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.CoreCompileInputs.cache
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.exe
+F:\Users\Mateo\source\repos\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.pdb
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.exe.config
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.exe
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Automatsko školsko zvono_MM.pdb
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\Interop.WMPLib.dll
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csprojAssemblyReference.cache
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Interop.WMPLib.dll
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.ResolveComReference.cache
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.Forme.BigScreen.resources
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.FormUI.resources
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko_školsko_zvono_MM.Properties.Resources.resources
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.GenerateResource.cache
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.exe
+C:\Users\Mateo\Desktop\Škola\Završni rad\Automatsko školsko zvono_MM\Automatsko školsko zvono_MM\obj\Debug\Automatsko školsko zvono_MM.pdb
