@@ -46,13 +46,13 @@ namespace Automatsko_školsko_zvono_MM.Forme
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            labelMsg.Text = Poruka;
+            labelMsg.Text = Poruka;//Preuzimanje poruke
 
-            labelMsg.Location = new Point(labelMsg.Location.X + 5, labelMsg.Location.Y);
+            labelMsg.Location = new Point(labelMsg.Location.X + 5, labelMsg.Location.Y);//Početak poruke
 
-            if (labelMsg.Location.X > this.Width)
+            if (labelMsg.Location.X > this.Width)//ako poruka dođe do kraja ekrana
             {
-                labelMsg.Location = new Point(0 - labelMsg.Width, labelMsg.Location.Y);
+                labelMsg.Location = new Point(0 - labelMsg.Width, labelMsg.Location.Y);//kreće opet s animacijom
             }
         }
     }

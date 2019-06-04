@@ -57,7 +57,7 @@
             this.labelSec.AutoSize = true;
             this.labelSec.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelSec.ForeColor = System.Drawing.Color.White;
-            this.labelSec.Location = new System.Drawing.Point(981, 359);
+            this.labelSec.Location = new System.Drawing.Point(991, 366);
             this.labelSec.Name = "labelSec";
             this.labelSec.Size = new System.Drawing.Size(103, 78);
             this.labelSec.TabIndex = 1;

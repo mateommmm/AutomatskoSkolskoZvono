@@ -63,6 +63,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timerCheck = new System.Windows.Forms.Timer(this.components);
+            this.lblSat = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBoxSmjena.SuspendLayout();
@@ -134,6 +135,7 @@
             // btnPošalji
             // 
             this.btnPošalji.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPošalji.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPošalji.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPošalji.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnPošalji.Location = new System.Drawing.Point(306, 388);
@@ -147,6 +149,7 @@
             // buttonPokreni
             // 
             this.buttonPokreni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonPokreni.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPokreni.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonPokreni.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.buttonPokreni.Location = new System.Drawing.Point(42, 388);
@@ -266,6 +269,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.lblSat);
             this.panel2.Controls.Add(this.labelMsg);
             this.panel2.Controls.Add(this.labelDatum);
             this.panel2.Controls.Add(this.labelDan);
@@ -282,7 +286,7 @@
             this.labelMsg.AutoSize = true;
             this.labelMsg.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelMsg.Location = new System.Drawing.Point(5, 210);
+            this.labelMsg.Location = new System.Drawing.Point(5, 232);
             this.labelMsg.Name = "labelMsg";
             this.labelMsg.Size = new System.Drawing.Size(204, 23);
             this.labelMsg.TabIndex = 5;
@@ -304,7 +308,7 @@
             this.labelDan.AutoSize = true;
             this.labelDan.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelDan.Location = new System.Drawing.Point(225, 95);
+            this.labelDan.Location = new System.Drawing.Point(175, 98);
             this.labelDan.Name = "labelDan";
             this.labelDan.Size = new System.Drawing.Size(154, 32);
             this.labelDan.TabIndex = 3;
@@ -315,7 +319,7 @@
             this.labelSec.AutoSize = true;
             this.labelSec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelSec.Location = new System.Drawing.Point(269, 59);
+            this.labelSec.Location = new System.Drawing.Point(269, 66);
             this.labelSec.Name = "labelSec";
             this.labelSec.Size = new System.Drawing.Size(28, 18);
             this.labelSec.TabIndex = 2;
@@ -426,6 +430,17 @@
             this.timerCheck.Interval = 1000;
             this.timerCheck.Tick += new System.EventHandler(this.timerCheck_Tick);
             // 
+            // lblSat
+            // 
+            this.lblSat.AutoSize = true;
+            this.lblSat.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblSat.Location = new System.Drawing.Point(5, 209);
+            this.lblSat.Name = "lblSat";
+            this.lblSat.Size = new System.Drawing.Size(110, 23);
+            this.lblSat.TabIndex = 6;
+            this.lblSat.Text = "Trenutni status";
+            // 
             // FormUI
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -493,6 +508,7 @@
         private System.Windows.Forms.RadioButton glazbaDomaca;
         private System.Windows.Forms.RadioButton glazbaStrana;
         private System.Windows.Forms.Label labelMsg;
+        private System.Windows.Forms.Label lblSat;
     }
 }
 
