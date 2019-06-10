@@ -46,11 +46,6 @@ namespace Automatsko_školsko_zvono_MM
 
 
 
-        private void Pokreni()
-        {
-
-        }
-
         public FormUI()
         {
             InitializeComponent();
@@ -76,11 +71,6 @@ namespace Automatsko_školsko_zvono_MM
         public Icon TheIcon { get; private set; }
 
 
-        private void labelStartDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //minimiziranje forme
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -88,11 +78,6 @@ namespace Automatsko_školsko_zvono_MM
             notifyIcon.Visible = true;
         }
 
-     
-        private void ExitApp(object sender, EventArgs e)
-        {
-           
-        }
 
         private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -100,18 +85,6 @@ namespace Automatsko_školsko_zvono_MM
             this.WindowState = FormWindowState.Normal;
             notifyIcon.Visible = false;
 
-
-        }
-
-
-
-        private void labelPoruka_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelSatiMinute_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -124,10 +97,7 @@ namespace Automatsko_školsko_zvono_MM
             labelDan.Text = DateTime.Now.ToString("dddd").ToUpper();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void FormUI_Load(object sender, EventArgs e)
         {
@@ -295,36 +265,8 @@ namespace Automatsko_školsko_zvono_MM
             }
         }
 
-        private static DateTime NewMethod(DateTime now)
-        {
-            return now.AddMinutes(1);
-        }
-
-        private void axPlayer_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBoxSmjena_Enter(object sender, EventArgs e)
-        {
-
-            
-
-        }
         //varijabla za tekst na oglasnoj ploči
         public string poruka;
-
-        private void nUDTrajanje_ValueChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnPošalji_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
 
         //metoda za pokretanje sekundarnog ekrana
         public Screen GetSecondaryScreen()
@@ -350,11 +292,6 @@ namespace Automatsko_školsko_zvono_MM
             poruka = textBoxMsg.Text;
             bigScreen.Poruka = poruka;
             labelMsg.Text = "Trenutna poruka za učenike: " + poruka;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
