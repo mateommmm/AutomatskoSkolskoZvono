@@ -16,11 +16,12 @@ namespace Automatsko_školsko_zvono_MM
     public partial class FormUI : Form
     {
         private int satiPocetak, minutePocetak, sekundePocetak;
-        public int trajanje;
-        DateTime prethodniSat = new DateTime();
+        int minuta,minuta2;
+        int prviSat,drugiSat, treciSat, cetvrtiSat,  petiSat, sestiSat, sedmiSat,kraj;
         BigScreen bigScreen = new BigScreen();
         String url;
-       
+     
+
         //sendmsg and release capture za pomicanje forme
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int LPAR);
@@ -159,129 +160,138 @@ namespace Automatsko_školsko_zvono_MM
         {
             axPlayer.Ctlcontrols.stop();
         }
-       
-        
+
+      
         //timer, periodno izvršavanje koda(za svaki tick)
         private void timerCheck_Tick(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
            
-          
-           
-            
-
-
+         
             if (now >= startaj && (int)now.DayOfWeek <= 4 && now.DayOfWeek >= 0) //ako je sada ili vise od pocetka pocetak i ako je raadni dan
             {
-               
+                if (radioButtonUjutro.Checked || radioButtonPoslijepodne.Checked)
+                {
 
                     if (now.Hour == satiPocetak && now.Minute == minutePocetak - 1 && now.Second == sekundePocetak)
                     {
-                    Play();
-                    lblSat.Text = "Zadnja minuta prije početka nastave";
-                     }
+                        Play();
+                        lblSat.Text = "Zadnja minuta prije početka nastave";
+
+                    }
                     else if (now.Hour == satiPocetak && now.Minute == minutePocetak && now.Second == sekundePocetak)//prvi
                     {
-                    Stop();
-                    lblSat.Text = "Prvi sat";
-                     }
-                    else if (now.Hour == satiPocetak && now.Minute == minutePocetak + trajanje && now.Second == sekundePocetak)//kraj prvoga
-                    {
-                    Play();                   
-                    lblSat.Text = "Prva stanka";
-                    prethodniSat = now.AddMinutes(1);
-                    }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//pocetak drugoga
-                    {
-                    Stop();
-                    lblSat.Text = "Drugi sat";
-                    prethodniSat = now.AddMinutes(trajanje);
-                     }
-                 else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//kraj drugoga
-                    {
-                    Play();
-                    prethodniSat = now.AddMinutes(1);
-                    lblSat.Text = "Druga stanka";
-                    }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//pocetak trecega
-                    {
-                    Stop();
-                    prethodniSat = now.AddMinutes(trajanje);
-                    lblSat.Text = "Treći sat";
-                    }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//kraj trecega
-                    {
-                    Play();
-                    prethodniSat = now.AddMinutes(1);
-                    lblSat.Text = "Veliki odmor";
-                    }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//pocetak cetvrtoga
-                    {
                         Stop();
-                        prethodniSat = now.AddMinutes(trajanje);
-                    lblSat.Text = "Četvrti sat";
-                }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//kraj cetvrtoga
+                        lblSat.Text = "Prvi sat";
+                       
+                    }
+                    else if (now.Hour == satiPocetak && now.Minute == 45 && now.Second == 0)//kraj prvoga
                     {
                         Play();
-                        prethodniSat = now.AddMinutes(1);
-                    lblSat.Text = "Četvrta stanka";
-                }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//pocetak petoga
-                    {
-                        Stop();
-                        prethodniSat = now.AddMinutes(trajanje);
-                    lblSat.Text = "Peti sat";
-                }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//kraj petoga
-                    {
-                    Play();
-                        prethodniSat = now.AddMinutes(1);
-                    lblSat.Text = "Peta stanka";
-                }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//pocetak sestoga
-                    {
-                        Stop();
-                        prethodniSat = now.AddMinutes(trajanje);
-                    lblSat.Text = "Šesti sat";
-                }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//kraj sestoga
-                    {
-                        Play();
-                        prethodniSat = now.AddMinutes(1);
-                    lblSat.Text = "Šesta stanka";
-                }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//pocetak sedmoga
-                    {
-                    Stop();
-                    if (trajanje > 5)
-                    {
-                        prethodniSat = now.AddMinutes(trajanje - 5);
+                        lblSat.Text = "Prva stanka";
+                        
                     }
-                    else
-                        prethodniSat = now.AddMinutes(trajanje);
-                    lblSat.Text = "Sedmi sat";
-                }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//kraj sedmoga
-                    {
-                        Play();
-                        prethodniSat = now.AddMinutes(5);
-                    lblSat.Text = "Kraj nastave";
-                }
-                    else if (now.Hour == prethodniSat.Hour && now.Minute == prethodniSat.Minute && now.Second == prethodniSat.Second)//kraj nastave
+                    else if (now.Hour == satiPocetak && now.Minute == 50 && now.Second == 0)//pocetak drugoga
                     {
                         Stop();
-                    lblSat.Text = "Zvono pokrenuto, čekanje početka";
+                        lblSat.Text = "Drugi sat";
+                        
+                    }
+                    else if (now.Hour ==drugiSat  && now.Minute == 35 && now.Second == 0)//kraj drugoga
+                    {
+                        Play();
+                       
+                        lblSat.Text = "Druga stanka";
+                    }
+                    else if (now.Hour == drugiSat && now.Minute == 40 && now.Second == 0)//pocetak trecega
+                    {
+                        Stop();
+                       
+                        lblSat.Text = "Treći sat";
+                    }
+                    else if (now.Hour == treciSat && now.Minute == 25 && now.Second == 0)//kraj trecega
+                    {
+                        Play();
+                      
+                        lblSat.Text = "Veliki odmor";
+                    }
+                    else if (now.Hour == treciSat && now.Minute == 45 && now.Second == 0)//pocetak cetvrtoga
+                    {
+                        Stop();
+                     
+                        lblSat.Text = "Četvrti sat";
+                    }
+                    else if (now.Hour == cetvrtiSat && now.Minute == 30 && now.Second == 0)//kraj cetvrtoga
+                    {
+                        Play();
+                      
+                        lblSat.Text = "Četvrta stanka";
+                    }
+                    else if (now.Hour == cetvrtiSat && now.Minute == 35 && now.Second == 0)//pocetak petoga
+                    {
+                        Stop();
+                       
+                        lblSat.Text = "Peti sat";
+                    }
+                    else if (now.Hour == petiSat && now.Minute == 20 && now.Second == 0)//kraj petoga
+                    {
+                        Play();
+                      
+                        lblSat.Text = "Peta stanka";
+                    }
+                    else if (now.Hour == petiSat && now.Minute == 25 && now.Second ==0)//pocetak sestoga
+                    {
+                        Stop();
+                       
+                        lblSat.Text = "Šesti sat";
+                    }
+                    else if (now.Hour ==sestiSat && now.Minute == 10 && now.Second == 0)//kraj sestoga
+                    {
+                        Play();
+                      
+                        lblSat.Text = "Šesta stanka";
+                    }
+                    else if (now.Hour == sestiSat && now.Minute == 15 && now.Second == 0)//pocetak sedmoga
+                    {
+                        Stop();
+                        lblSat.Text = "Sedmi sat";
+                    }
+                    else if (now.Hour == kraj && now.Minute == 0 && now.Second == 0)//kraj sedmoga
+                    {
+                        Play();
+                        
+                        lblSat.Text = "Kraj nastave";
+                    }
+                    else if (now.Hour == kraj && now.Minute == 5 && now.Second ==0)//kraj nastave
+                    {
+                        Stop();
+                        lblSat.Text = "Zvono pokrenuto, čekanje početka";
+                    }
+
                 }
+                else if(radioButtonDemo.Checked)
+                {
+                    if (minuta2 % 60 == 0)
+                    {
+                        if (minuta == 0)
+                        {
+                            Play();
+                            minuta = 1;
+                            lblSat.Text = "Sada imitiram odmor";
+                        }
+                        else if (minuta == 1)
+                        {
+                            Stop();
+                            minuta = 0;
+                            lblSat.Text = "Sada imitiram Sat";
+                        }
 
-
-
-
-                    
-              
-                
-
-
+                        
+                    }
+                   
+                }
+                minuta2++;
+                                                                                 
             }
         }
 
@@ -306,8 +316,7 @@ namespace Automatsko_školsko_zvono_MM
 
         private void nUDTrajanje_ValueChanged(object sender, EventArgs e)
         {
-            nUDTrajanje.Maximum = 45;
-            nUDTrajanje.Minimum = 0;
+           
         }
 
         private void btnPošalji_Click(object sender, EventArgs e)
@@ -361,23 +370,45 @@ namespace Automatsko_školsko_zvono_MM
         {
             DateTime start = new DateTime(dtPickerPocetak.Value.Year, dtPickerPocetak.Value.Month, dtPickerPocetak.Value.Day, satiPocetak, minutePocetak, sekundePocetak);
             //uzimanje trajanja sata sa nuda
-            trajanje = Decimal.ToInt32(nUDTrajanje.Value);
+        
+            DateTime sada = DateTime.Now;
             
             startaj = start;
+           
             
             //pogledaj koja smo smjena
             if (radioButtonUjutro.Checked)
             {
-                satiPocetak = 09;
-                minutePocetak = 30;
+                satiPocetak = 08;
+                minutePocetak = 00;
                 sekundePocetak = 00;
+
+                drugiSat = 9;
+                treciSat = 10;
+                cetvrtiSat = 11;
+                petiSat = 12;
+                sestiSat = 13;
+                kraj = 14;
+               
+
             }
             else if(radioButtonPoslijepodne.Checked)
             {
                 satiPocetak = 14;
                 minutePocetak = 00;
                 sekundePocetak = 00;
-                
+
+                drugiSat = 15;
+                treciSat = 16;
+                cetvrtiSat = 17;
+                petiSat = 18;
+                sestiSat = 19;
+                kraj = 20;
+            }
+           else if(radioButtonDemo.Checked)
+            {
+                minuta = 0;
+                minuta2 = 0;
             }
 
             //odabir glazbe
@@ -392,6 +423,7 @@ namespace Automatsko_školsko_zvono_MM
             else
                 url = "https://hr-youfm-justmusic.sslcast.addradio.de/hr/youfm/justmusic/mp3/128/stream.mp3";
 
+          
 
             timerCheck.Start();//startanje timera
 
@@ -418,7 +450,17 @@ namespace Automatsko_školsko_zvono_MM
                }
 
             lblSat.Text = "Zvono pokrenuto, čekanje početka";
-            MessageBox.Show("Pokrenuli ste školsko zvono!", "Zvono pokrenuto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            if(radioButtonDemo.Checked)
+            {
+                MessageBox.Show("Pokrenuli ste školsko zvono u demo verziji, ne preporuča se dugotrajan rad u ovom režimu!", "Zvono pokrenuto u demo verziji", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                poruka = "Pokrenuli ste školsko zvono u demo verziji, ne preporuča se dugotrajan rad u ovom režimu!";
+                bigScreen.Poruka = poruka;
+            }
+            else
+                MessageBox.Show("Pokrenuli ste školsko zvono!", "Zvono pokrenuto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
         }
 
 

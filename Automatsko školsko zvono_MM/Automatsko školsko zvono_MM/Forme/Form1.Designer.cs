@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonDemo = new System.Windows.Forms.RadioButton();
             this.glazbaDomaca = new System.Windows.Forms.RadioButton();
             this.glazbaStrana = new System.Windows.Forms.RadioButton();
             this.btnPošalji = new System.Windows.Forms.Button();
@@ -41,11 +42,9 @@
             this.groupBoxSmjena = new System.Windows.Forms.GroupBox();
             this.radioButtonPoslijepodne = new System.Windows.Forms.RadioButton();
             this.radioButtonUjutro = new System.Windows.Forms.RadioButton();
-            this.labelMin = new System.Windows.Forms.Label();
-            this.nUDTrajanje = new System.Windows.Forms.NumericUpDown();
-            this.labelTrajanjeSata = new System.Windows.Forms.Label();
             this.dtPickerPocetak = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblSat = new System.Windows.Forms.Label();
             this.labelMsg = new System.Windows.Forms.Label();
             this.labelDatum = new System.Windows.Forms.Label();
             this.labelDan = new System.Windows.Forms.Label();
@@ -63,11 +62,9 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timerCheck = new System.Windows.Forms.Timer(this.components);
-            this.lblSat = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBoxSmjena.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDTrajanje)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,9 +82,6 @@
             this.panel1.Controls.Add(this.textBoxMsg);
             this.panel1.Controls.Add(this.labelPoruka);
             this.panel1.Controls.Add(this.groupBoxSmjena);
-            this.panel1.Controls.Add(this.labelMin);
-            this.panel1.Controls.Add(this.nUDTrajanje);
-            this.panel1.Controls.Add(this.labelTrajanjeSata);
             this.panel1.Controls.Add(this.dtPickerPocetak);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.labelStartDate);
@@ -103,17 +97,28 @@
             this.groupBox1.Controls.Add(this.glazbaStrana);
             this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Location = new System.Drawing.Point(306, 66);
+            this.groupBox1.Location = new System.Drawing.Point(363, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(219, 128);
+            this.groupBox1.Size = new System.Drawing.Size(161, 97);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Odabir glazbe";
             // 
+            // radioButtonDemo
+            // 
+            this.radioButtonDemo.AutoSize = true;
+            this.radioButtonDemo.Location = new System.Drawing.Point(185, 25);
+            this.radioButtonDemo.Name = "radioButtonDemo";
+            this.radioButtonDemo.Size = new System.Drawing.Size(111, 24);
+            this.radioButtonDemo.TabIndex = 2;
+            this.radioButtonDemo.TabStop = true;
+            this.radioButtonDemo.Text = "Demo version";
+            this.radioButtonDemo.UseVisualStyleBackColor = true;
+            // 
             // glazbaDomaca
             // 
             this.glazbaDomaca.AutoSize = true;
-            this.glazbaDomaca.Location = new System.Drawing.Point(7, 78);
+            this.glazbaDomaca.Location = new System.Drawing.Point(15, 56);
             this.glazbaDomaca.Name = "glazbaDomaca";
             this.glazbaDomaca.Size = new System.Drawing.Size(75, 24);
             this.glazbaDomaca.TabIndex = 1;
@@ -124,7 +129,7 @@
             // 
             this.glazbaStrana.AutoSize = true;
             this.glazbaStrana.Checked = true;
-            this.glazbaStrana.Location = new System.Drawing.Point(7, 32);
+            this.glazbaStrana.Location = new System.Drawing.Point(15, 26);
             this.glazbaStrana.Name = "glazbaStrana";
             this.glazbaStrana.Size = new System.Drawing.Size(63, 24);
             this.glazbaStrana.TabIndex = 0;
@@ -183,13 +188,14 @@
             // 
             // groupBoxSmjena
             // 
+            this.groupBoxSmjena.Controls.Add(this.radioButtonDemo);
             this.groupBoxSmjena.Controls.Add(this.radioButtonPoslijepodne);
             this.groupBoxSmjena.Controls.Add(this.radioButtonUjutro);
             this.groupBoxSmjena.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSmjena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupBoxSmjena.Location = new System.Drawing.Point(42, 66);
             this.groupBoxSmjena.Name = "groupBoxSmjena";
-            this.groupBoxSmjena.Size = new System.Drawing.Size(255, 61);
+            this.groupBoxSmjena.Size = new System.Drawing.Size(315, 61);
             this.groupBoxSmjena.TabIndex = 6;
             this.groupBoxSmjena.TabStop = false;
             this.groupBoxSmjena.Text = "Smjena";
@@ -198,7 +204,7 @@
             // radioButtonPoslijepodne
             // 
             this.radioButtonPoslijepodne.AutoSize = true;
-            this.radioButtonPoslijepodne.Location = new System.Drawing.Point(117, 26);
+            this.radioButtonPoslijepodne.Location = new System.Drawing.Point(74, 25);
             this.radioButtonPoslijepodne.Name = "radioButtonPoslijepodne";
             this.radioButtonPoslijepodne.Size = new System.Drawing.Size(107, 24);
             this.radioButtonPoslijepodne.TabIndex = 1;
@@ -216,46 +222,6 @@
             this.radioButtonUjutro.TabStop = true;
             this.radioButtonUjutro.Text = "Ujutro";
             this.radioButtonUjutro.UseVisualStyleBackColor = true;
-            // 
-            // labelMin
-            // 
-            this.labelMin.AutoSize = true;
-            this.labelMin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMin.Location = new System.Drawing.Point(303, 36);
-            this.labelMin.Name = "labelMin";
-            this.labelMin.Size = new System.Drawing.Size(35, 15);
-            this.labelMin.TabIndex = 5;
-            this.labelMin.Text = "min.";
-            // 
-            // nUDTrajanje
-            // 
-            this.nUDTrajanje.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nUDTrajanje.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nUDTrajanje.Location = new System.Drawing.Point(249, 30);
-            this.nUDTrajanje.Name = "nUDTrajanje";
-            this.nUDTrajanje.Size = new System.Drawing.Size(48, 22);
-            this.nUDTrajanje.TabIndex = 4;
-            this.nUDTrajanje.Value = new decimal(new int[] {
-            45,
-            0,
-            0,
-            0});
-            this.nUDTrajanje.ValueChanged += new System.EventHandler(this.nUDTrajanje_ValueChanged);
-            // 
-            // labelTrajanjeSata
-            // 
-            this.labelTrajanjeSata.AutoSize = true;
-            this.labelTrajanjeSata.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTrajanjeSata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelTrajanjeSata.Location = new System.Drawing.Point(245, 4);
-            this.labelTrajanjeSata.Name = "labelTrajanjeSata";
-            this.labelTrajanjeSata.Size = new System.Drawing.Size(99, 23);
-            this.labelTrajanjeSata.TabIndex = 3;
-            this.labelTrajanjeSata.Text = "Trajanje sata";
             // 
             // dtPickerPocetak
             // 
@@ -280,6 +246,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(386, 471);
             this.panel2.TabIndex = 1;
+            // 
+            // lblSat
+            // 
+            this.lblSat.AutoSize = true;
+            this.lblSat.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblSat.Location = new System.Drawing.Point(5, 209);
+            this.lblSat.Name = "lblSat";
+            this.lblSat.Size = new System.Drawing.Size(110, 23);
+            this.lblSat.TabIndex = 6;
+            this.lblSat.Text = "Trenutni status";
             // 
             // labelMsg
             // 
@@ -430,17 +407,6 @@
             this.timerCheck.Interval = 1000;
             this.timerCheck.Tick += new System.EventHandler(this.timerCheck_Tick);
             // 
-            // lblSat
-            // 
-            this.lblSat.AutoSize = true;
-            this.lblSat.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblSat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblSat.Location = new System.Drawing.Point(5, 209);
-            this.lblSat.Name = "lblSat";
-            this.lblSat.Size = new System.Drawing.Size(110, 23);
-            this.lblSat.TabIndex = 6;
-            this.lblSat.Text = "Trenutni status";
-            // 
             // FormUI
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -462,7 +428,6 @@
             this.groupBox1.PerformLayout();
             this.groupBoxSmjena.ResumeLayout(false);
             this.groupBoxSmjena.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDTrajanje)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axPlayer)).EndInit();
@@ -486,9 +451,6 @@
         private System.Windows.Forms.GroupBox groupBoxSmjena;
         private System.Windows.Forms.RadioButton radioButtonPoslijepodne;
         private System.Windows.Forms.RadioButton radioButtonUjutro;
-        private System.Windows.Forms.Label labelMin;
-        private System.Windows.Forms.NumericUpDown nUDTrajanje;
-        private System.Windows.Forms.Label labelTrajanjeSata;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.Button buttonPokreni;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -509,6 +471,7 @@
         private System.Windows.Forms.RadioButton glazbaStrana;
         private System.Windows.Forms.Label labelMsg;
         private System.Windows.Forms.Label lblSat;
+        private System.Windows.Forms.RadioButton radioButtonDemo;
     }
 }
 
